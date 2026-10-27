@@ -1,0 +1,28 @@
+DOCUMENTAÇÃO DO PROJETO
+
+Tema: Loja virtual Automotiva.
+
+Objetivo: Criar uma página simples usando HTML e JavaScript para mostrar produtos e seus preços.
+
+Entidades:
+- Produtos: nome e preço dos produtos.
+- Clientes: nome dos clientes.
+- Pedidos: cliente, produto e quantidade.
+
+Exemplo de JSON:
+
+{
+  "produtos": [
+    { "id": 1, "nome": "Snow Foam", "preco": 39.90 },
+    { "id": 2, "nome": "Toalha", "preco": 19.90 }
+  ],
+  "clientes": [
+    { "id": 1, "nome": "Victor" }
+  ],
+  "pedidos": [
+    { "id": 1, "cliente_id": 1, "produto_id": 2, "quantidade": 1 }
+  ]
+}
+
+Tecnologias: HTML, CSS, JavaScript e JSON.
+
