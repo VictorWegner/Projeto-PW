@@ -1,16 +1,157 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>Minha Loja</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITRIXX - Loja Automotiva</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>VITRIXZ</h1>
 
-    <p>Bem-vindo à minha loja!</p>
+    <header>
+        <h1>VITRIXX</h1>
+        <p>Loja Virtual Automotiva</p>
 
-    <a href="documentacao.txt">
-        Ver documentação do projeto
-    </a>
+        <nav>
+            <button data-aba="inicio">Início</button>
+            <button data-aba="catalogo">Catálogo</button>
+            <button data-aba="login" id="botaoLogin">Login</button>
+            <button data-acao="sair" id="botaoSair" hidden>Sair</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="aba">
+            <h2>Bem-vindo à minha loja!</h2>
+            <p>Confira nossos produtos automotivos.</p>
+
+            <a href="documentacao.txt" target="_blank">
+                Ver documentação do projeto
+            </a>
+        </section>
+
+        <section id="catalogo" class="aba" hidden>
+            <h2>Catálogo de Produtos</h2>
+            <div id="listaCatalogo"></div>
+        </section>
+
+        <section id="login" class="aba" hidden>
+            <h2>Login Administrativo</h2>
+
+            <form id="formLogin">
+                <label>Usuário:</label>
+                <input type="text" id="usuario" required>
+
+                <label>Senha:</label>
+                <input type="password" id="senha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+
+            <p id="mensagemLogin"></p>
+        </section>
+
+        <section id="administracao" class="aba" hidden>
+
+            <h2>Painel Administrativo</h2>
+            <p>Gerenciamento da loja VITRIXX.</p>
+
+            <nav class="menuAdmin">
+                <button data-admin="produtos">Produtos</button>
+                <button data-admin="clientes">Clientes</button>
+                <button data-admin="pedidos">Pedidos</button>
+            </nav>
+
+            <section id="produtos" class="adminAba">
+
+                <h3>Produtos</h3>
+
+                <form id="formProduto">
+
+                    <input type="hidden" id="produtoId">
+
+                    <label>Nome do produto:</label>
+                    <input type="text" id="produtoNome" required>
+
+                    <label>Preço:</label>
+                    <input type="number" id="produtoPreco"
+                        min="0" step="0.01" required>
+
+                    <button type="submit">Salvar Produto</button>
+                    <button type="button" id="limparProduto">Limpar</button>
+
+                </form>
+
+                <h3>Produtos cadastrados</h3>
+                <div id="tabelaProdutos"></div>
+
+            </section>
+
+            <section id="clientes" class="adminAba" hidden>
+
+                <h3>Clientes</h3>
+
+                <form id="formCliente">
+
+                    <input type="hidden" id="clienteId">
+
+                    <label>Nome:</label>
+                    <input type="text" id="clienteNome" required>
+
+                    <label>Contato:</label>
+                    <input type="text" id="clienteContato" required>
+
+                    <button type="submit">Salvar Cliente</button>
+                    <button type="button" id="limparCliente">Limpar</button>
+
+                </form>
+
+                <h3>Clientes cadastrados</h3>
+                <div id="tabelaClientes"></div>
+
+            </section>
+
+            <section id="pedidos" class="adminAba" hidden>
+
+                <h3>Pedidos</h3>
+
+                <form id="formPedido">
+
+                    <input type="hidden" id="pedidoId">
+
+                    <label>Cliente:</label>
+                    <select id="pedidoCliente" required></select>
+
+                    <label>Produto:</label>
+                    <select id="pedidoProduto" required></select>
+
+                    <label>Quantidade:</label>
+                    <input type="number" id="pedidoQuantidade"
+                        min="1" step="1" required>
+
+                    <button type="submit">Salvar Pedido</button>
+                    <button type="button" id="limparPedido">Limpar</button>
+
+                </form>
+
+                <h3>Pedidos cadastrados</h3>
+                <div id="tabelaPedidos"></div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>VITRIXX - Loja Virtual Automotiva</p>
+    </footer>
+
+    <script src="app.js"></script>
+
 </body>
 </html>

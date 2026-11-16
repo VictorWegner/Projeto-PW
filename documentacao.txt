@@ -1,28 +1,49 @@
+
 DOCUMENTAÇÃO DO PROJETO
 
-Tema: Loja virtual Automotiva.
+Nome: VITRIXX
 
-Objetivo: Criar uma página simples usando HTML e JavaScript para mostrar produtos e seus preços.
+Tema: Loja Virtual Automotiva.
 
-Entidades:
-- Produtos: nome e preço dos produtos.
-- Clientes: nome dos clientes.
-- Pedidos: cliente, produto e quantidade.
+Objetivo:
+Criar uma loja virtual simples para apresentar produtos automotivos e permitir o gerenciamento de clientes, produtos e pedidos.
 
-Exemplo de JSON:
+ENTIDADES:
 
-{
-  "produtos": [
-    { "id": 1, "nome": "Snow Foam", "preco": 39.90 },
-    { "id": 2, "nome": "Toalha", "preco": 19.90 }
-  ],
-  "clientes": [
-    { "id": 1, "nome": "Victor" }
-  ],
-  "pedidos": [
-    { "id": 1, "cliente_id": 1, "produto_id": 2, "quantidade": 1 }
-  ]
-}
+Produtos:
+- ID
+- Nome
+- Preço
 
-Tecnologias: HTML, CSS, JavaScript e JSON.
+Clientes:
+- ID
+- Nome
+- Contato
 
+Pedidos:
+- ID
+- Cliente
+- Produto
+- Quantidade
+- Valor total
+
+FUNCIONALIDADES:
+
+- Visualização de produtos.
+- Cadastro de produtos.
+- Edição de produtos.
+- Exclusão de produtos.
+- Cadastro de clientes.
+- Edição de clientes.
+- Exclusão de clientes.
+- Cadastro de pedidos.
+- Edição de pedidos.
+- Exclusão de pedidos.
+- Login administrativo.
+
+TECNOLOGIAS:
+
+- HTML
+- CSS
+- JavaScript
+- LocalStorage
